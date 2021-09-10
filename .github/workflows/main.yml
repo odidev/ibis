@@ -98,5 +98,6 @@ jobs:
             python3 -m pip install pytest && \
             python3 -m pip install pytest-cov && \
             python3 -m pip install sqlalchemy && \
+            python3 -m  pip install pytest-mock && \
             ./ci/run_tests.sh'
      
