@@ -92,6 +92,7 @@ jobs:
             arm64v8/ubuntu \
             bash -exc 'apt update && \
             uname -m && \
-            pip install . && \
+            ap-get install python3-pip && \
+            python -m pip install . && \
             ./ci/run_tests.sh --numprocesses auto'
      
