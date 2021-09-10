@@ -89,11 +89,11 @@ jobs:
             bash -exc 'apt update && \
             uname -m && \
             apt-get install -y python3-pip && \
-            python -m pip install --upgrade pip setuptools wheel && \
-            python -m pip install . && \
-            python -m pip install pytest && \
-            python -m pip install pytest-cov && \
-            python -m pip install sqlalchemy && \
-            python -m pip install pytest-mock && \
+            python3 -m pip install --upgrade pip setuptools wheel && \
+            python3 -m pip install . && \
+            python3 -m pip install pytest && \
+            python3 -m pip install pytest-cov && \
+            python3 -m pip install sqlalchemy && \
+            python3 -m pip install pytest-mock && \
             ./ci/run_tests.sh'
      
