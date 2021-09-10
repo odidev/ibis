@@ -97,5 +97,5 @@ jobs:
             python3 -m pip install . && \
             python3 -m pip install pytest && \
             python3 -m pip install pytest-cov && \
-            ./ci/run_tests.sh --numprocesses auto'
+            ./ci/run_tests.sh'
      
