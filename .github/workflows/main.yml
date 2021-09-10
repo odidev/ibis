@@ -93,8 +93,8 @@ jobs:
             bash -exc 'apt update && \
             uname -m && \
             apt-get install -y python3-pip && \
-            python -m pip install --upgrade pip
-            python -m pip install . && \
-            python -m pip install pytest && \
+            python3 -m pip install --upgrade pip
+            python3 -m pip install . && \
+            python3 -m pip install pytest && \
             ./ci/run_tests.sh --numprocesses auto'
      
