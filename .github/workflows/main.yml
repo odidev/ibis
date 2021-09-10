@@ -54,7 +54,7 @@ jobs:
         shell: bash -l {0}
     strategy:
       matrix:
-        pyver: ["3.9"]
+        pyver: ["3.7", "3.9"]
       fail-fast: false
     runs-on: ubuntu-latest
     env:
@@ -92,13 +92,12 @@ jobs:
             arm64v8/ubuntu \
             bash -exc 'apt update && \
             uname -m && \
-            apt-get install -y python3.9 && \
-            apt-get install -y python3.9-pip && \
-            python3.9 -m pip install --upgrade pip
-            python3.9 -m pip install . && \
-            python3.9 -m pip install pytest && \
-            python3.9 -m pip install pytest-cov && \
-            python3.9 -m pip install sqlalchemy && \
-            python3.9 -m  pip install pytest-mock && \
+            apt-get install -y python3-pip && \
+            python3 -m pip install --upgrade pip
+            python3 -m pip install . && \
+            python3 -m pip install pytest && \
+            python3 -m pip install pytest-cov && \
+            python3 -m pip install sqlalchemy && \
+            python3 -m pip install pytest-mock && \
             ./ci/run_tests.sh'
      
