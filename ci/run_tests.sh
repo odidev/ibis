@@ -16,8 +16,8 @@ set -u
 echo "TESTS_DIRS: $TESTS_DIRS"
 
 pytest $TESTS_DIRS \
-    -q \
-    -ra \
-    --junitxml=junit.xml \
-    --cov=ibis \
-    --cov-report=xml:coverage.xml "$@" | tee pytest.log
+    #-q \
+    #-ra \
+    #--junitxml=junit.xml \
+    #--cov=ibis \
+    #--cov-report=xml:coverage.xml "$@" | tee pytest.log
