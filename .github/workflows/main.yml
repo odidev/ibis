@@ -86,15 +86,14 @@ jobs:
         run: |
             docker run --rm -v ${{ github.workspace }}:/ws:rw --workdir=/ws \
             arm64v8/ubuntu \
-            bash -exc '${{ env.py }} -m venv .env && \
-            source .env/bin/activate && \
+            bash -exc 'apt update && \
             uname -m && \
+            apt-get install -y python3-pip && \
             python -m pip install --upgrade pip setuptools wheel && \
-            pip install . && \
-            pip install pytest && \
-            pip install pytest-cov && \
-            pip install sqlalchemy && \
-            pip install pytest-mock && \
-            ./ci/run_tests.sh && \
-            deactivate'
+            python -m pip install . && \
+            python -m pip install pytest && \
+            python -m pip install pytest-cov && \
+            python -m pip install sqlalchemy && \
+            python -m pip install pytest-mock && \
+            ./ci/run_tests.sh'
      
