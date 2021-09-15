@@ -90,9 +90,9 @@ jobs:
             apt-get install -y sudo && \
             apt install software-properties-common -y && \
             sudo add-apt-repository ppa:deadsnakes/ppa -y && \
-            apt install -y ${{ matrix.pyver }} && \
-            apt install -y ${{ matrix.pyver }}-venv && \
-            ${{ matrix.pyver }} -m venv .env && \
+            apt install -y python${{ matrix.pyver }} && \
+            apt install -y python${{ matrix.pyver }}-venv && \
+            python${{ matrix.pyver }} -m venv .env && \
             source .env/bin/activate && \
             uname -m && \
             python -m pip install --upgrade pip setuptools wheel && \
