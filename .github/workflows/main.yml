@@ -101,6 +101,6 @@ jobs:
             python -m pip install pytest-cov && \
             python -m pip install sqlalchemy && \
             python -m pip install pytest-mock && \
-            ./ci/run_tests.sh && \
+            ./ci/run_tests.sh ibis/tests && \
             deactivate'
      
